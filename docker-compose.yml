@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:10-alpine
+    ports:
+      - 5430:5432
+
+  app:
+    build: .
+    command: "yarn nodemon ./src/server.js"
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
