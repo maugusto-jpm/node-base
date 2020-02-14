@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "yarn nodemon src/server.js",
+    "start": "yarn nodemon ./src/server.js",
+    "d-up": "docker-compose up",
     "d-console": "docker-compose exec app sh"
   },
   "dependencies": {

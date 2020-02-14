@@ -4,10 +4,9 @@ module.exports = {
   username: 'postgres',
   password: 'postgres',
   database: 'app_development',
-  operatorsAliases: false,
   define: {
     timestamps: true,
-    undescored: true,
-    undescoredAll: true,
+    underscored: true,
+    underscoredAll: true
   }
 };
