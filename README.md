@@ -51,7 +51,7 @@ Esqueleto de uma api web, com banco de dados integrado e autenticação.
 
 Para montar o ambiente, basta executar:
 
-- `docker-compose up -d` para a criação dos containers;
+- `docker-compose up -d` para a criação dos contâiners;
 - `yarn d_console` para entrar no contâiner;
 - `yarn start` para iniciar o servidor;
 - Vai estar executando no endereço `localhst:5000`;
