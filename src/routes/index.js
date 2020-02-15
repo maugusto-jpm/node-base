@@ -1,11 +1,11 @@
-var express = require('express');
+const router = require('express').Router();
 
-var router = express.Router();
+var userRoutes = require('./models/user');
 
 router.get('/', function(req, res, next) {
   return res.json({ hello: 'World!' });
 });
 
-require('./users');
+router.use('/user', userRoutes);
 
 module.exports = router;
