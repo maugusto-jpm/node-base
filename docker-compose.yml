@@ -11,6 +11,8 @@ services:
     command: "/bin/sh -c 'while true; do sleep 60; done'"
     volumes:
       - .:/app
+      - $HOME/.ssh/id_rsa:/root/.ssh/id_rsa:ro
+      - $HOME/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub:ro
     ports:
       - 3000:3000
     depends_on:
