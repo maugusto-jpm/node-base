@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-const { User } = require('../../src/app/models');
+const factory = require('../factories');
 
 const app = require('../../src/app');
 const truncate = require('../utils/truncade');
@@ -11,8 +11,7 @@ describe('Autentication', () => {
   });
 
   it('should autenticate with valid credentials', async () => {
-    const user = await User.create({
-      name: 'Marcelo',
+    const user = await factory.create('User', {
       email: 'email@provider.com',
       password: '123456'
     });
@@ -30,8 +29,7 @@ describe('Autentication', () => {
   });
 
   it('should not autenticate with valid credentials', async () => {
-    const user = await User.create({
-      name: 'Marcelo',
+    const user = await factory.create('User', {
       email: 'email@provider.com',
       password: '123456'
     });
