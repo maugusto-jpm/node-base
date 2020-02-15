@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres:10-alpine
     ports:
-      - 5430:5432
+      - 5454:5432
 
   app:
     build: .
@@ -14,6 +14,9 @@ services:
       - $HOME/.ssh/id_rsa:/root/.ssh/id_rsa:ro
       - $HOME/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub:ro
     ports:
-      - 3000:3000
+      - 5000:5000
+    environment:
+      DB_PORT: 5432
+      DB_HOST: postgres
     depends_on:
       - postgres
