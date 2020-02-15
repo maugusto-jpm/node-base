@@ -56,7 +56,7 @@ Para montar o ambiente, basta executar:
 - `yarn start` para iniciar o servidor;
 - Vai estar executando no endereço `localhst:5000`;
 
-Também é possível executar comandos no sevidor fora do contâiner, com o `yarn start`. Neste caso, o servidor vai estar executando no endereço `localhst:3000`;
+Também é possível executar comandos no sevidor fora do contâiner, com o `yarn start`. Neste caso, o servidor vai estar executando no endereço `localhst:3000`
 
 ## Portas
 
