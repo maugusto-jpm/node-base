@@ -2,6 +2,8 @@ const { User } = require('../app/models');
 
 module.exports = {
   async index(req, res) {
-    return res.status(200).send();
+    const user = await User.findByPk(req.userId);
+
+    return res.json({ user: user.basicInfo() });
   }
 };

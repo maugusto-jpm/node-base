@@ -16,7 +16,7 @@ describe('Autentication', () => {
     });
 
     const response = await request(app)
-      .post('/session/new')
+      .post('/session')
       .send({
         name: 'User Name',
         email: 'email@provider.com',
@@ -35,7 +35,7 @@ describe('Autentication', () => {
     });
 
     const response = await request(app)
-      .post('/session/new')
+      .post('/session')
       .send({
         name: 'User Name',
         email: 'email@provider.com',
