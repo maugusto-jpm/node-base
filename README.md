@@ -1,6 +1,6 @@
 # Base de uma aplicação web feita em Node.Js
 
-Esqueleto de uma api web, com banco de dados integrado e autenticação
+Esqueleto de uma api web, com banco de dados integrado e autenticação.
 
 ## Características
 
