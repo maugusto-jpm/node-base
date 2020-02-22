@@ -4,7 +4,7 @@ Esqueleto de uma api web, com banco de dados integrado e autenticação.
 
 ## Características
 
-- A aplicação principal o o banco de dados são configuradas em contâiners [Docker](https://www.docker.com/);
+- A aplicação principal o o banco de dados são configuradas em contêiners [Docker](https://www.docker.com/);
 - Utiliza o banco de dados [Postgres](https://www.postgresql.org/);
 - Utiliza o ORM [Sequelize](https://sequelize.org/) para abstraçao do banco de dados;
 - Utiliza o jest para testes;
@@ -18,7 +18,7 @@ Esqueleto de uma api web, com banco de dados integrado e autenticação.
 ## Dependências
 
 - [Yarn](https://yarnpkg.com/) - gerenciador de dependência;
-- [Docker Compose](https://docs.docker.com/compose/) - gerenciador de contâiners;
+- [Docker Compose](https://docs.docker.com/compose/) - gerenciador de contêiners;
 
 ## Rotas
 
@@ -51,16 +51,16 @@ Esqueleto de uma api web, com banco de dados integrado e autenticação.
 
 Para montar o ambiente, basta executar:
 
-- `docker-compose up -d` para a criação dos contâiners;
-- `yarn d_console` para entrar no contâiner;
+- `docker-compose up -d` para a criação dos contêiners;
+- `yarn d_console` para entrar no contêiner;
 - `yarn start` para iniciar o servidor;
 - Vai estar executando no endereço `localhst:5000`;
 
-Também é possível executar comandos no sevidor fora do contâiner, com o `yarn start`. Neste caso, o servidor vai estar executando no endereço `localhst:3000`
+Também é possível executar comandos no sevidor fora do contêiner, com o `yarn start`. Neste caso, o servidor vai estar executando no endereço `localhst:3000`
 
 ## Portas
 
 - O servidor Postgres dentro do container da aplicação, está disponível na porta `5432`;
 - O servidor Postgres fora do container da aplicação, está disponível na porta `5454`;
-- O servidor da aplicação, se executado dentro do contâiner, está disponível na porta `5000`;
-- O servidor da aplicação, se executado fora do contâiner, está disponível na porta `3000`;
+- O servidor da aplicação, se executado dentro do contêiner, está disponível na porta `5000`;
+- O servidor da aplicação, se executado fora do contêiner, está disponível na porta `3000`;

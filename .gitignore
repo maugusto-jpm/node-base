@@ -1,4 +1,13 @@
-node_modules/
-yarn.lock
-npm-debug.log
-__tests__/coverage
+# Dependency folder
+/node_modules
+
+# Yarn files
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Test coverage report
+/__tests__/coverage
+
+# Git conflit files
+*.orig
