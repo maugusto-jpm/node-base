@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 
-const { User } = require('../../../../src/app/models');
+const factory = require('../../../factories');
 const truncate = require('../../../utils/truncade');
 
 describe('User', () => {
@@ -9,9 +9,7 @@ describe('User', () => {
   });
 
   it('should encrypt user password', async () => {
-    const user = await User.create({
-      name: 'Diego',
-      email: 'diego@rocketseat.com.br',
+    const user = await factory.create('User', {
       password: '123456'
     });
 
