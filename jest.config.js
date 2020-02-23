@@ -18,18 +18,18 @@ module.exports = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  // collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: [
-    'src/**',
-    '!src/database/migrations/**',
-    '!src/database/seeders/**',
-    '!src/server.js'
-  ],
+  // collectCoverageFrom: [
+  //   'src/**',
+  //   '!src/database/migrations/**',
+  //   '!src/database/seeders/**',
+  //   '!src/server.js'
+  // ],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: '__tests__/coverage',
+  // coverageDirectory: '__tests__/coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -57,7 +57,7 @@ module.exports = {
   // forceCoverageMatch: [],
 
   // A path to a module which exports an async function that is triggered once before all test suites
-  globalSetup: './__tests__/setup',
+  // globalSetup: './__tests__/setup',
 
   // A path to a module which exports an async function that is triggered once after all test suites
   globalTeardown: './__tests__/teardown',
@@ -131,13 +131,15 @@ module.exports = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  // setupFilesAfterEnv: [
+  //   './__tests__/truncate_database.js'
+  // ],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "node",
+  testEnvironment: 'node',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},

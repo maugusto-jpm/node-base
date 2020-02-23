@@ -1,5 +1,5 @@
-const db = require('../src/app/models');
+const { sequelize } = require('../src/app/models');
 
 module.exports = async () => {
-  db.sequelize.close();
+  sequelize.close();
 };

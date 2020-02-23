@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 
-const factory = require('../../../factories');
-const truncate = require('../../../utils/truncade');
+const factory = require('../../factories');
+const truncate = require('../../utils/truncade');
 
 describe('User', () => {
   beforeEach(async () => {
