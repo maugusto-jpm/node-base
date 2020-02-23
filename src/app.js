@@ -10,10 +10,14 @@ class AppController {
 
   middlewares() {
     this.express.use(express.json());
+
+    if (process.env.NODE_ENV !== 'production') {
+      require('./middleware/load_local_envs');
+    }
   }
 
   routes() {
-    this.express.use(require('./routes'));
+    this.express.use(require('./app/routes'));
   }
 }
 

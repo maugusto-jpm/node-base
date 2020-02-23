@@ -17,7 +17,7 @@ describe('GET #dashboard', () => {
 
     const response = await request(app)
       .get('/dashboard')
-      .set('Authorization', `Bearer ${user.generateToken()}`);
+      .set('Authorization', user.generateToken());
 
     expect(response.status).toBe(200);
   });

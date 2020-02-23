@@ -1,10 +1,3 @@
-if (process.env.NODE_ENV !== "production") {
-  const dotenvExpand = require('dotenv-expand');
-  const dotenv = require('dotenv').config({ encoding: 'utf8' });
-
-  dotenvExpand(dotenv);
-}
-
 module.exports = {
   host: process.env.DB_HOST,
   username: process.env.DB_USER,

@@ -1,4 +1,4 @@
-const { User } = require('../app/models');
+const { User } = require('../models');
 
 module.exports = {
   async store(req, res) {
@@ -7,7 +7,7 @@ module.exports = {
     const user = await User.findOne({ where: { email } });
 
     if (!user || !(await user.checkPassword(password))) {
-      return res.status(401).json({ message: "Incorrect email or password" });
+      return res.status(401).json({ message: 'Incorrect email or password' });
     }
 
     return res.json({

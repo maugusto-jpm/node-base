@@ -10,7 +10,7 @@ describe('POST #session', () => {
   });
 
   it('should autenticate with valid credentials', async () => {
-    const user = await factory.create('User', {
+    await factory.create('User', {
       email: 'email@provider.com',
       password: '123456'
     });
@@ -18,7 +18,6 @@ describe('POST #session', () => {
     const response = await request(app)
       .post('/session')
       .send({
-        name: 'User Name',
         email: 'email@provider.com',
         password: '123456'
       });
@@ -29,7 +28,7 @@ describe('POST #session', () => {
   });
 
   it('should not autenticate with valid credentials', async () => {
-    const user = await factory.create('User', {
+    await factory.create('User', {
       email: 'email@provider.com',
       password: '123456'
     });
@@ -37,7 +36,6 @@ describe('POST #session', () => {
     const response = await request(app)
       .post('/session')
       .send({
-        name: 'User Name',
         email: 'email@provider.com',
         password: '123'
       });
