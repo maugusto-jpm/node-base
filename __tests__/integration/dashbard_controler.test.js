@@ -12,7 +12,7 @@ describe('GET #dashboard', () => {
   it('should be able to access private routes when authenticated', async () => {
     const user = await factory.create('User', {
       email: 'email@provider.com',
-      password: '123456'
+      password: '123456',
     });
 
     const response = await request(app)

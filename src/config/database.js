@@ -7,10 +7,11 @@ module.exports = {
   database: process.env.DB_NAME,
   port: process.env.DB_PORT,
   dialect: process.env.DB_DIALECT,
+  storage: process.env.DB_SQLITE_STORAGE,
   logging: false,
   define: {
     timestamps: true,
     underscored: true,
-    underscoredAll: true
+    underscoredAll: true,
   },
 };

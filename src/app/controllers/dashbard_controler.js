@@ -5,5 +5,5 @@ module.exports = {
     const user = await User.findByPk(req.userId);
 
     return res.json({ user: user.basicInfo() });
-  }
+  },
 };

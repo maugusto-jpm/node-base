@@ -11,3 +11,7 @@ yarn-debug.log*
 
 # Git conflit files
 *.orig
+
+# SQlite files
+*.sqlite
+*.sqlite-journal

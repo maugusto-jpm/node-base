@@ -12,7 +12,7 @@ module.exports = {
 
     return res.json({
       user: user.basicInfo(),
-      token: user.generateToken()
+      token: user.generateToken(),
     });
-  }
+  },
 };

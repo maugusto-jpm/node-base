@@ -4,7 +4,7 @@ var userRoutes = require('./models/user');
 var sessionRoutes = require('./session');
 var dashboardRoutes = require('./dashboard');
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   return res.json({ hello: 'World!' });
 });
 

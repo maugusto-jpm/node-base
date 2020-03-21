@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
     {
       hooks: {
         beforeSave: async user => {
-          if (!!user.password) {
+          if (user.password) {
             user.password_hash = await bcrypt.hash(user.password, 8);
           }
         },
-      }
+      },
     }
   );
 
@@ -26,11 +26,13 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   User.prototype.generateToken = function() {
-    const token = jwt.sign({
-      id: this.id,
-      ...this.basicInfo()
-    },
-    process.env.APP_SECRET);
+    const token = jwt.sign(
+      {
+        id: this.id,
+        ...this.basicInfo(),
+      },
+      process.env.APP_SECRET
+    );
 
     return `Bearer ${token}`;
   };
@@ -38,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
   User.prototype.basicInfo = function() {
     return {
       name: this.name,
-      email: this.email
+      email: this.email,
     };
   };
 

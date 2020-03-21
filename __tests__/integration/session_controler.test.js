@@ -12,16 +12,15 @@ describe('POST #session', () => {
   it('should autenticate with valid credentials', async () => {
     await factory.create('User', {
       email: 'email@provider.com',
-      password: '123456'
+      password: '123456',
     });
 
     const response = await request(app)
       .post('/session')
       .send({
         email: 'email@provider.com',
-        password: '123456'
+        password: '123456',
       });
-
 
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty('token');
@@ -30,14 +29,14 @@ describe('POST #session', () => {
   it('should not autenticate with valid credentials', async () => {
     await factory.create('User', {
       email: 'email@provider.com',
-      password: '123456'
+      password: '123456',
     });
 
     const response = await request(app)
       .post('/session')
       .send({
         email: 'email@provider.com',
-        password: '123'
+        password: '123',
       });
 
     expect(response.status).toBe(401);
